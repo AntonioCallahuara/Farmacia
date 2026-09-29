@@ -41,17 +41,17 @@
 <body>
 
   <!-- ======= Header ======= -->
-  @include('shared.header')
+  @include('layouts.header')
   <!-- End Header -->
 
   <!-- ======= Sidebar ======= -->
-  @include('shared.aside')
+  @include('layouts.aside')
   <!-- End Sidebar-->
 
   <!-- End #main -->
 
   <!-- ======= Footer ======= -->
-  @include('shared.footer')
+  @include('layouts.footer')
   <!-- End Footer -->
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>

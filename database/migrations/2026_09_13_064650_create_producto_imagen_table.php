@@ -6,15 +6,12 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
     public function up(): void
     {
-        Schema::create('imagen', function (Blueprint $table) {
+        Schema::create('producto_imagen', function (Blueprint $table) {
             $table->id();
             $table->foreignId('producto_id')->constrained('producto')->onDelete('cascade')->onUpdate('cascade');
-            $table->string('ruta');          
+            $table->string('ruta');
             $table->string('nombre')->nullable();
             $table->string('tipo', 10)->nullable();
             $table->boolean('es_principal')->default(false);
@@ -23,11 +20,8 @@ return new class extends Migration
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
-        Schema::dropIfExists('imagen');
+        Schema::dropIfExists('producto_imagen');
     }
 };
